@@ -51,7 +51,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 heap_t *heap_insert(heap_t **root, int value)
 {
 	ssize_t n = binary_tree_height(*root) + 1;
-	int bit = 0;
+	int idx = 0;
 	heap_t *node = *root, *new_node;
 
 	new_node = binary_tree_node(node, value);
@@ -62,12 +62,12 @@ heap_t *heap_insert(heap_t **root, int value)
 	if (!*root)
 		return (*root = new_node);
 
-	while (1 << (bit + 1) <= n)
-		bit++;
+	while (1 << (idx + 1) <= n)
+		idx++;
 
-	for (bit--; bit > 0; bit--)
+	for (idx--; idx > 0; idx--)
 	{
-		if (n & (1 << bit))
+		if (n & (1 << idx))
 			node = node->right;
 		else
 			node = node->left;
