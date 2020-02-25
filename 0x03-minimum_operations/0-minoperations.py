@@ -7,7 +7,7 @@ def minOperations(n):
     needed to result in exactly n H characters in the file.'"""
     operations = 0
     if n <= 1:
-        return 0
+        return operations
 
     for i in range(2, int(n ** 1/2 + 1)):
         while n % i == 0:
