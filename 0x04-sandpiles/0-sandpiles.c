@@ -37,6 +37,23 @@ int is_unstable(int grid[3][3])
 }
 
 /**
+ * add_sandpiles - adds two sandpiles, saves result in grid1
+ * @grid1: sandpile #1
+ * @grid2: sandpile #2
+ */
+void add_sandpiles(int grid1[3][3], int grid2[3][3])
+{
+	size_t i, j;
+
+	for (i = 0; i < 3; i++)
+		for (j = 0; j < 3; j++)
+		{
+			grid1[i][j] += grid2[i][j];
+			grid2[i][j] = 0;
+		}
+}
+
+/**
  * check_piles- tumble a sandpile grid square
  * @grid1: grid to tumble on
  * @grid2: row to tumble
@@ -63,23 +80,6 @@ void check_piles(int grid1[3][3], int grid2[3][3])
 		}
 	}
 	add_sandpiles(grid1, grid2);
-}
-
-/**
- * add_sandpiles - adds two sandpiles, saves result in grid1
- * @grid1: sandpile #1
- * @grid2: sandpile #2
- */
-void add_sandpiles(int grid1[3][3], int grid2[3][3])
-{
-	size_t i, j;
-
-	for (i = 0; i < 3; i++)
-		for (j = 0; j < 3; j++)
-		{
-			grid1[i][j] += grid2[i][j];
-			grid2[i][j] = 0;
-		}
 }
 
 /**
