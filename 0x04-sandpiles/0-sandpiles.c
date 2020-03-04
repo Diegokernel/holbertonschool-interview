@@ -38,8 +38,8 @@ int is_unstable(int grid[3][3])
 
 /**
  * check_piles- tumble a sandpile grid square
- * @grid: grid to tumble on
- * @row: row to tumble
+ * @grid1: grid to tumble on
+ * @grid2: row to tumble
  * Return: void
  */
 void check_piles(int grid1[3][3], int grid2[3][3])
