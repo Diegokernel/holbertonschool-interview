@@ -19,7 +19,7 @@ int is_palindrome(unsigned long n)
 		n /=10;
 	}
 
-	if (reve == num)
+	if (rev == num)
 		return (1);
 	return (0);
 }
