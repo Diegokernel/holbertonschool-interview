@@ -38,13 +38,13 @@ int slide_line(int *line, size_t size, int direction)
 		}
 	    if (curr == line[sld_stp])
 	      {
-		line[slideidx] = last * 2;
+		line[slideidx] = curr * 2;
 		slideidx += i;
 		curr = 0;
 	      }
 	    else if (curr != 0)
 	      {
-		line[slideidx] = last;
+		line[slideidx] = curr;
 		slideidx += i;
 		curr = line[sld_stp];
 	      }
