@@ -1,4 +1,4 @@
-ifndef _SEARCH_
+#ifndef _SEARCH_
 #define _SEARCH_
 
 #include <stdio.h>
@@ -30,4 +30,4 @@ skiplist_t *create_skiplist(int *array, size_t size);
 void print_skiplist(const skiplist_t *list);
 skiplist_t *linear_skip(skiplist_t *list, int value);
 
-#endif /* _SEARCH_ *
+#endif /* _SEARCH_ */
