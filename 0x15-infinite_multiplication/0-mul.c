@@ -16,11 +16,12 @@ void print_num(int *arrint, int size)
 	}
 
 	for (i = 0; arrint[i] == 0; i++)
-        ;
+	  ;
+
 	while (i < size)
 	{
 		printf("%d", arrint[i]);
-        i++;
+		i++;
 	}
 	printf("\n");
 }
@@ -44,20 +45,21 @@ int multiply(char *stri1, char *stri2)
 	if (!arrint)
 		return (0);
 
-    i = len1 - 1;
+	i = len1 - 1;
+
 	while (i >= 0)
 	{
 		n1 = stri1[i] - '0';
-        j = len2 - 1;
+		j = len2 - 1;
 		while (j >= 0)
 		{
 			n2 = stri2[j] - '0';
 			sum = (n1 * n2) + arrint[i + j + 1];
 			arrint[i + j] += sum / 10;
 			arrint[i + j + 1] = sum % 10;
-            j--;
+			j--;
 		}
-        i--;
+		i--;
 	}
 
 	print_num(arrint, len1 + len2);
@@ -68,7 +70,7 @@ int multiply(char *stri1, char *stri2)
 /**
  * main - multiplies two positive numbers
  * @argc: number of arguments passed
- * @argv: arguments passed 
+ * @argv: arguments passed
  * Return: 0 in success,
  */
 int main(int argc, char **argv)
