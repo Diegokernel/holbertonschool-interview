@@ -6,12 +6,12 @@ heap_t *find_ln(int max_prof, int cor_prof, heap_t *node);
 void downt(heap_t *node);
 
 /**
- * hext - Extracts the root node of a Max Binary Heap
+ * heap_extract - Extracts the root node of a Max Binary Heap
  * @root: Double pointer to the root node of the binary heap
  * Return: Value stored in @root (root_node->n)
  */
 
-int hext(heap_t **root)
+int heap_extract(heap_t **root)
 {
 	heap_t *tmp;
 	heap_t *cor;
