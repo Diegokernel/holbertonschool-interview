@@ -93,7 +93,7 @@ int main(int argc, char **argv)
 	if (*argv[1] == '0' || *argv[2] == '0')
 		print_num(NULL, 0);
 
-	if (multiply(argv[1], argv[2]) == NULL)
+	if (!multiply(argv[1], argv[2]))
 		return (1);
 
 	return (0);
