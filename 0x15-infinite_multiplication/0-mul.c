@@ -1,7 +1,4 @@
 #include "holberton.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * print_num - prints an array of ints
