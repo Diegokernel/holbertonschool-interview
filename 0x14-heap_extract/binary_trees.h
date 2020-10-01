@@ -24,7 +24,8 @@ struct binary_tree_s
 typedef struct binary_tree_s binary_tree_t;
 typedef struct binary_tree_s heap_t;
 
-int hext(heap_t **root);
+void binary_tree_print(const binary_tree_t *);
+int heap_extract(heap_t **root);
 heap_t *ln(heap_t *root);
 int max_prof(heap_t *node);
 heap_t *find_ln(int max_prof, int cor_prof, heap_t *node);
