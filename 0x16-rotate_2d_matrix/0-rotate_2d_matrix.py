@@ -18,4 +18,3 @@ def rotate_2d_matrix(m):
             m[n - 1 - j][i] = m[n - 1 - i][n - 1 - j]
             m[n - 1 - i][n - 1 - j] = m[j][n - 1 - i]
             m[j][n - 1 - i] = temp
-
